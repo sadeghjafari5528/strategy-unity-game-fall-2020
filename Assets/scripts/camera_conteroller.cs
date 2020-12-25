@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camera_movement : MonoBehaviour
+public class camera_conteroller : MonoBehaviour
 {
     int _speed = 5;
     // Start is called before the first frame update
@@ -46,9 +46,5 @@ public class camera_movement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -5.0f, -10);
         }
-    }
-    private void mouse_movement()
-    {
-
     }
 }
