@@ -7,6 +7,7 @@ public class canves_manager : MonoBehaviour
 {
     public void goToTownMap()
     {
+        Debug.Log("change sence");
         SceneManager.LoadScene("town_map");
     }
 }

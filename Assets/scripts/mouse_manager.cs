@@ -9,6 +9,7 @@ public class mouse_manager : MonoBehaviour
 	private int raycastLenght = 1000;
 	[SerializeField]
 	private GameObject town_button;
+	private y
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -18,13 +19,14 @@ public class mouse_manager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//mouse_movement();
+		mouse_movement();
 		mouse_handler_click();
 
 	}
 	private void mouse_movement()
 	{
-		Debug.Log("helloworld");
+		Debug.Log(Input.mousePosition);
+		if ()
 	}
 	private void mouse_handler_click()
 	{
@@ -42,7 +44,7 @@ public class mouse_manager : MonoBehaviour
 		}
         else
         {
-			if (Input.GetMouseButton(0))
+			if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
 			{
 				setAllFalse();
 			}
