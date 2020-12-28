@@ -9,12 +9,14 @@ public class mouse_manager : MonoBehaviour
 	private int raycastLenght = 1000;
 	[SerializeField]
 	private GameObject town_button;
-	private y
+	Camera c;
 	// Start is called before the first frame update
 	void Start()
 	{
-		
-		}
+		//Debug.Log(Camera.current.name);
+		c = Camera.main;
+
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -25,8 +27,13 @@ public class mouse_manager : MonoBehaviour
 	}
 	private void mouse_movement()
 	{
-		Debug.Log(Input.mousePosition);
-		if ()
+		float halfHeight = c.orthographicSize;
+		float halfWidth = c.aspect * halfHeight;
+		//Debug.Log(Input.mousePosition);
+		if (Input.mousePosition.x - transform.position.x > halfWidth - 1)
+        {
+			transform.Translate(Vector3.right * Time.deltaTime * 5);
+		}
 	}
 	private void mouse_handler_click()
 	{
